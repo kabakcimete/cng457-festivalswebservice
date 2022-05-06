@@ -1,4 +1,4 @@
-package com.example.festivalswebservice.service;
+package com.example.festivalswebservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
