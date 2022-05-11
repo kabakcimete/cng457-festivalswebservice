@@ -26,9 +26,10 @@ public class FestivalRun {
     private String Name;
     private int Duration;
     private Date Date;
-    @OneToMany
+    @OneToMany(mappedBy = "Festivalrun" , cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Event> Events;
-    @ManyToMany
+    @ManyToMany(mappedBy = "festivals" , fetch = FetchType.EAGER)
+
     private Set<Organizer> Organizers;
     @ManyToOne
     private Festival festival;

@@ -22,6 +22,6 @@ public class Festival {
     private int FestivalId;
     private String FestivalName;
     private String City;
-    @OneToMany
+    @OneToMany(mappedBy = "festival" , cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<FestivalRun> FestivalRuns;
 }
