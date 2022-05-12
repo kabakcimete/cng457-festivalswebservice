@@ -25,7 +25,7 @@ public  class Event {
     private String name;
     private String Description;
     private Date Date;
-    @OneToOne
+    @ManyToOne
     private FestivalRun Festivalrun;
 
 }
