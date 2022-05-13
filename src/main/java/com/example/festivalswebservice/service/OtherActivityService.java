@@ -11,6 +11,11 @@ public class OtherActivityService {
     @Autowired
     OtherActivityRepository otherActivityRepository;
 
+    /**
+     * This method is for adding the given OtherActivity
+     * @param o OtherActivity object
+     * @return OtherActivity
+     */
     public OtherActivity saveOtherActivity(OtherActivity o){
         return otherActivityRepository.save(o);
     }

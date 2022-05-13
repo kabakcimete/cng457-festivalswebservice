@@ -11,6 +11,11 @@ public class ShowService {
     @Autowired
     ShowRepository showRepository;
 
+    /**
+     * This method is for adding the given Show
+     * @param s Show object
+     * @return Show
+     */
     public Show saveShow(Show s){
         return showRepository.save(s);
     }
