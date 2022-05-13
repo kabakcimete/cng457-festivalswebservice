@@ -21,11 +21,11 @@ public  class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="eid")
-    private int EventId;
+    private int eventId;
     private String name;
-    private String Description;
-    private Date Date;
+    private String description;
+    private Date date;
     @ManyToOne
-    private FestivalRun Festivalrun;
+    private FestivalRun festivalrun;
 
 }
