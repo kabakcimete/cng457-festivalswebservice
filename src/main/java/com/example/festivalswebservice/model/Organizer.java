@@ -19,12 +19,12 @@ public class Organizer {
 
     @Id
     @Column(name="email")
-    private String Email;
-    private String FName;
-    private String LName;
-    private String Address;
-    private int Phone;
+    private String email;
+    private String fName;
+    private String lName;
+    private String address;
+    private int phone;
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "FestivalOrganizer", joinColumns = @JoinColumn (name = "frid"), inverseJoinColumns = @JoinColumn (name = "email"))
+    @JoinTable(name = "festivalOrganizer", joinColumns = @JoinColumn (name = "frid"), inverseJoinColumns = @JoinColumn (name = "email"))
     private Set<FestivalRun> festivals;
 }

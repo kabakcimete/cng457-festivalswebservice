@@ -14,5 +14,5 @@ import javax.persistence.Entity;
 @Data
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "EventId")
 public class Show extends Event{
-    private String  Performers;
+    private String  performers;
 }

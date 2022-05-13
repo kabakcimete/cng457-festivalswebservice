@@ -19,9 +19,9 @@ public class Festival {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="fid")
-    private int FestivalId;
-    private String FestivalName;
-    private String City;
+    private int festivalId;
+    private String festivalName;
+    private String city;
     @OneToMany(mappedBy = "festival" , cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<FestivalRun> FestivalRuns;
+    private Set<FestivalRun> festivalRuns;
 }

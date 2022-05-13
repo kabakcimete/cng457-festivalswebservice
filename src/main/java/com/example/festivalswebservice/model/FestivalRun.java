@@ -22,15 +22,15 @@ public class FestivalRun {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="frid")
-    private int FestivalRunId;
-    private String Name;
-    private int Duration;
-    private Date Date;
-    @OneToMany(mappedBy = "Festivalrun" , cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<Event> Events;
+    private int festivalRunId;
+    private String name;
+    private int duration;
+    private Date date;
+    @OneToMany(mappedBy = "festivalrun" , cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<Event> events;
     @ManyToMany(mappedBy = "festivals" , fetch = FetchType.EAGER)
 
-    private Set<Organizer> Organizers;
+    private Set<Organizer> organizers;
     @ManyToOne
     private Festival festival;
 }
