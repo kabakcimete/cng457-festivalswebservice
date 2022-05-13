@@ -10,6 +10,11 @@ public class ConcertService {
     @Autowired
     ConcertRepository concertRepository;
 
+    /**
+     * This method is for adding concert
+     * @param c Concert object to be saved
+     * @return returns Concert object that is saved
+     */
     public Concert saveConcert(Concert c){
         return concertRepository.save(c);
     }

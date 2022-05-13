@@ -1,5 +1,5 @@
 package com.example.festivalswebservice.service;
-;
+
 
 import com.example.festivalswebservice.model.Festival;
 import com.example.festivalswebservice.model.FestivalRun;
@@ -15,23 +15,49 @@ public class FestivalService {
     @Autowired
     FestivalRepository festivalRepository;
 
+
+    /**
+     * This method returns the wanted festival by id.
+     * @param id integer value for the wanted festival
+     * @return Festival
+     */
     public Festival getFestival(int id){
         return festivalRepository.findByFestivalId(id);
 
     }
 
+    /**
+     * This method returns list of all the Festival
+     * @return List of Festival
+     */
     public List<Festival> getAllFestival(){
         return festivalRepository.findAll();
 
     }
 
+    /**
+     * This method is for adding the given Festival
+     * @param f Festival object
+     * @return Festival
+     */
     public Festival saveFestival(Festival f){
         return festivalRepository.save(f);
     }
 
+    /**
+     * This method returns the set of FestivalRun for the given Festival id.
+     * @param id for the Festival
+     * @return Set of FestivalRun
+     */
     public Set<FestivalRun> getAllFestivalRuns(int id){
         return festivalRepository.findByFestivalId(id).getFestivalRuns();
     }
+
+    /**
+     * This method returns the list of Festival for the given city name in String format
+     * @param c the city name in String format
+     * @return List of Festival
+     */
     public List<Festival> getFestivalsForACity(String c){
         return festivalRepository.findByCityContains(c);
     }

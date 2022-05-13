@@ -12,6 +12,11 @@ public class OrganizerService {
     @Autowired
     OrganizerRepository organizerRepository;
 
+    /**
+     * This method is for adding Organizer
+     * @param o Organizer object
+     * @return Organizer is returned
+     */
     public Organizer saveOrganizer(Organizer o){
         return organizerRepository.save(o);
     }
