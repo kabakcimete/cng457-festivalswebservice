@@ -9,6 +9,9 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Set;
 
+/**
+ * Festival class has OneToMany relation with festivalrun
+ */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @AllArgsConstructor

@@ -13,6 +13,11 @@ public class OtherActivityController {
     @Autowired
     OtherActivityService otherActivityService;
 
+    /**
+     *
+     * @param o is the otheractivity that is going to be added
+     * @return otheractivity instance that is added
+     */
     @PostMapping("/addotheractivity")
     public OtherActivity saveOtherActivity(@RequestBody OtherActivity o){
         return otherActivityService.saveOtherActivity(o);

@@ -12,6 +12,11 @@ public class ShowController {
     @Autowired
     ShowService showService;
 
+    /**
+     *
+     * @param s is the show that is going to be added
+     * @return object that is added
+     */
     @PostMapping("/addshow")
     public Show saveShow(@RequestBody Show s){
         return showService.saveShow(s);

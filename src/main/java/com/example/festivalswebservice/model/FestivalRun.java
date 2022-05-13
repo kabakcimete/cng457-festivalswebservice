@@ -11,7 +11,11 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
 
-
+/**
+ * festivalrun class has onetomany relation with Events,
+ * ManyToMany relations with Organizer
+ * and ManyToOne relation with Festival
+ */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
