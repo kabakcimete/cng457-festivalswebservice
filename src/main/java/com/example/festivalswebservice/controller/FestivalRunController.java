@@ -28,7 +28,7 @@ public class FestivalRunController {
      * @return festivalrun instance with given festivalrunid
      */
 
-    @GetMapping("/getfestivalrun{festivalrunid}")
+    @GetMapping("/getfestivalrun/{festivalrunid}")
     public FestivalRun getFestivalRun(@PathVariable int festivalrunid){
         return festivalRunService.getFestivalRun(festivalrunid);
     }

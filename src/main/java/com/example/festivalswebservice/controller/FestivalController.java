@@ -30,7 +30,7 @@ public class FestivalController {
      * @param festivalid is the festivalID using this pk we get the needed festival object
      * @return needed festival object is returned
      */
-    @GetMapping("/getfestival{festivalid}")
+    @GetMapping("/getfestival/{festivalid}")
     public Festival getFestival(@PathVariable int festivalid){
         return festivalService.getFestival(festivalid);
     }
