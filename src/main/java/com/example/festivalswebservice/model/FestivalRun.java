@@ -20,13 +20,13 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "FestivalRunId")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "festivalrunid")
 public class FestivalRun {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="frid")
-    private int festivalRunId;
+
+    private int festivalrunid;
     private String name;
     private int duration;
     private Date date;

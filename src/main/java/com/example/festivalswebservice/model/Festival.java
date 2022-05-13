@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -17,14 +18,13 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "FestivalId")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "festivalid")
 public class Festival {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="fid")
-    private int festivalId;
-    private String festivalName;
+    private int festivalid;
+    private String festivalname;
     private String city;
     @OneToMany(mappedBy = "festival" , cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<FestivalRun> festivalRuns;
+    private List<FestivalRun> festivalruns;
 }
