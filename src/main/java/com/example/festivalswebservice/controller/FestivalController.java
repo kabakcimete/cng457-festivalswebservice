@@ -3,12 +3,10 @@ package com.example.festivalswebservice.controller;
 import com.example.festivalswebservice.model.Festival;
 import com.example.festivalswebservice.model.FestivalRun;
 import com.example.festivalswebservice.service.FestivalService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 @RestController
 public class FestivalController {
@@ -30,7 +28,7 @@ public class FestivalController {
      * @param festivalid is the festivalID using this pk we get the needed festival object
      * @return needed festival object is returned
      */
-    @GetMapping("/getfestival{festivalid}")
+    @GetMapping("/getfestival/{festivalid}")
     public Festival getFestival(@PathVariable int festivalid){
         return festivalService.getFestival(festivalid);
     }
