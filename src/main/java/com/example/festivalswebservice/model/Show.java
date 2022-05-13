@@ -8,6 +8,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 
+
+/**
+ * Show Entity extends Event entity
+ */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

@@ -10,6 +10,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Event entity is a superclass for Concert, Show, and OtherActivity
+ * Has ManytoOne relationship with festivalrun
+ */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @AllArgsConstructor

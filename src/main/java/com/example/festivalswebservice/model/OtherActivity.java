@@ -8,6 +8,10 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 
+
+/**
+ * OtherActivity Entity extends Event entity
+ */
 @Entity
 @AllArgsConstructor
 @Data

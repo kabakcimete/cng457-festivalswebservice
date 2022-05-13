@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.util.Set;
 
+
+/**
+ * Organizer class has ManyToMany relation with festivalruns
+ */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

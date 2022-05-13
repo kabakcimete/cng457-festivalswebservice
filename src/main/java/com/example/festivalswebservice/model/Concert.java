@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 
+
+/**
+ * Concert Entity extends Event entity
+ */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor

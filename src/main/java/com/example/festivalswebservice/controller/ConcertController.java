@@ -13,6 +13,11 @@ public class ConcertController {
     @Autowired
     ConcertService concertService;
 
+    /**
+     *
+     * @param c is the concert to be added
+     * @return the concert that are added
+     */
     @PostMapping("/addconcert")
     public Concert saveConcert(@RequestBody Concert c){
         return concertService.saveConcert(c);
