@@ -1,7 +1,6 @@
 package com.example.festivalswebservice.service;
 
-import com.example.festivalswebservice.model.FestivalRun;
-import com.example.festivalswebservice.model.Show;
+import com.example.festivalswebservice.model.Shows;
 import com.example.festivalswebservice.repository.ShowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,7 @@ public class ShowService {
      * @param s Show object
      * @return Show
      */
-    public Show saveShow(Show s){
+    public Shows saveShow(Shows s){
         return showRepository.save(s);
     }
 }

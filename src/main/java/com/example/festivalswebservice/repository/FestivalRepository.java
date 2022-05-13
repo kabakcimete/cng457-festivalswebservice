@@ -10,7 +10,7 @@ public interface FestivalRepository  extends JpaRepository<Festival, Integer> {
      * @param x is the wanted id of Festival with the type integer
      * @return Festival with the id number of input variable x
      * */
-    public Festival findByFestivalId(int x);
+    public Festival findByFestivalid(int x);
     /**
      * @param s is the name of the city in String format
      * @return List of Festival with the given city name of variable s

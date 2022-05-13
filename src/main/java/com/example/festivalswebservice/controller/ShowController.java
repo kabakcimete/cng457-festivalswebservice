@@ -1,6 +1,6 @@
 package com.example.festivalswebservice.controller;
 
-import com.example.festivalswebservice.model.Show;
+import com.example.festivalswebservice.model.Shows;
 import com.example.festivalswebservice.service.ShowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +18,7 @@ public class ShowController {
      * @return object that is added
      */
     @PostMapping("/addshow")
-    public Show saveShow(@RequestBody Show s){
+    public Shows saveShow(@RequestBody Shows s){
         return showService.saveShow(s);
     }
 }

@@ -17,18 +17,17 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "Email")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "email")
 public class Organizer {
 
 
     @Id
-    @Column(name="email")
     private String email;
-    private String fName;
-    private String lName;
+    private String fname;
+    private String lname;
     private String address;
     private int phone;
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "festivalOrganizer", joinColumns = @JoinColumn (name = "frid"), inverseJoinColumns = @JoinColumn (name = "email"))
+    @JoinTable(name = "festivalOrganizer", joinColumns = @JoinColumn (name = "festivalrunid"), inverseJoinColumns = @JoinColumn (name = "email"))
     private Set<FestivalRun> festivals;
 }

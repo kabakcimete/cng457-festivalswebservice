@@ -18,7 +18,7 @@ public class FestivalRunService {
      * @return FestivalRun is returned
      */
     public FestivalRun getFestivalRun(int id){
-        return festivalRunRepository.findByFestivalRunId(id);
+        return festivalRunRepository.findByFestivalrunid(id);
     }
 
     /**

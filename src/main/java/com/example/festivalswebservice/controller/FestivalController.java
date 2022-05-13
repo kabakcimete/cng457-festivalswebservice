@@ -50,7 +50,7 @@ public class FestivalController {
      * @return all the festivalruns with that given festivalid
      */
     @GetMapping("/getallfestivalruns/{festivalid}")
-    public Set<FestivalRun> getAllFestivalRuns(@PathVariable int festivalid){
+    public List<FestivalRun> getAllFestivalRuns(@PathVariable int festivalid){
         return festivalService.getAllFestivalRuns(festivalid);
     }
 

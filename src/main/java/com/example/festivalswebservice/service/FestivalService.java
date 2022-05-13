@@ -22,7 +22,7 @@ public class FestivalService {
      * @return Festival
      */
     public Festival getFestival(int id){
-        return festivalRepository.findByFestivalId(id);
+        return festivalRepository.findByFestivalid(id);
 
     }
 
@@ -49,8 +49,8 @@ public class FestivalService {
      * @param id for the Festival
      * @return Set of FestivalRun
      */
-    public Set<FestivalRun> getAllFestivalRuns(int id){
-        return festivalRepository.findByFestivalId(id).getFestivalRuns();
+    public List<FestivalRun> getAllFestivalRuns(int id){
+        return festivalRepository.findByFestivalid(id).getFestivalruns();
     }
 
     /**

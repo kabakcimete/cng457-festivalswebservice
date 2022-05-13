@@ -17,7 +17,7 @@ public class OrganizerController {
      * @param o is an organizer to be added
      * @return organizer that are added
      */
-    @PostMapping("/addorganizer")
+    @PostMapping("/addorganiser")
     public Organizer saveOrganizer(@RequestBody Organizer o){
         return organizerService.saveOrganizer(o);
     }
