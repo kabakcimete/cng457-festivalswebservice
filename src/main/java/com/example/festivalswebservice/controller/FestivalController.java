@@ -3,12 +3,10 @@ package com.example.festivalswebservice.controller;
 import com.example.festivalswebservice.model.Festival;
 import com.example.festivalswebservice.model.FestivalRun;
 import com.example.festivalswebservice.service.FestivalService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 @RestController
 public class FestivalController {

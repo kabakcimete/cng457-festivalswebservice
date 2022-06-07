@@ -2,11 +2,10 @@ package com.example.festivalswebservice.controller;
 
 import com.example.festivalswebservice.model.Concert;
 import com.example.festivalswebservice.service.ConcertService;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class ConcertController {
@@ -22,4 +21,11 @@ public class ConcertController {
     public Concert saveConcert(@RequestBody Concert c){
         return concertService.saveConcert(c);
     }
+
+    @GetMapping("/concertsbydescription")
+    public List<Concert> findByDescriptionContains(@RequestParam(name="key", required = true) String key){
+    return concertService.findByDescriptionContains(key);
+    }
+
+
 }

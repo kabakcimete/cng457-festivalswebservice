@@ -43,4 +43,5 @@ public class FestivalRunController {
         return festivalRunService.getShortFestivalRun(duration);
     }
 
+
 }
