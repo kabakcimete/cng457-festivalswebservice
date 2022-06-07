@@ -5,6 +5,8 @@ import com.example.festivalswebservice.repository.ConcertRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ConcertService {
     @Autowired
@@ -18,5 +20,10 @@ public class ConcertService {
     public Concert saveConcert(Concert c){
         return concertRepository.save(c);
     }
+
+    public List<Concert> findByDescriptionContains(String d){
+        return concertRepository.findByDescriptionContains(d);
+    }
+
 
 }

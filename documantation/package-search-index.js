@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.example.festivalswebservice"},{"l":"com.example.festivalswebservice.controller"},{"l":"com.example.festivalswebservice.model"},{"l":"com.example.festivalswebservice.repository"},{"l":"com.example.festivalswebservice.service"}];updateSearchResults();

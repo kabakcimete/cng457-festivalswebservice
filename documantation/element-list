@@ -1,0 +1,5 @@
+com.example.festivalswebservice
+com.example.festivalswebservice.controller
+com.example.festivalswebservice.model
+com.example.festivalswebservice.repository
+com.example.festivalswebservice.service
