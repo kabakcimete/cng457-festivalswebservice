@@ -1,6 +1,7 @@
 package com.example.festivalswebservice.controller;
 
 import com.example.festivalswebservice.model.Concert;
+import com.example.festivalswebservice.model.Shows;
 import com.example.festivalswebservice.service.ConcertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,5 +28,8 @@ public class ConcertController {
     return concertService.findByDescriptionContains(key);
     }
 
-
+    @GetMapping("/longestconcerts")
+    public List<Concert> longestConcert(){
+        return concertService.longestConcert();
+    }
 }
