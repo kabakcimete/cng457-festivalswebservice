@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class FestivalService {
@@ -61,4 +60,8 @@ public class FestivalService {
     public List<Festival> getFestivalsForACity(String c){
         return festivalRepository.findByCityContains(c);
     }
+
+    public List<Festival> festivalsByName(String name){return festivalRepository.getFestivalbyName(name);}
+
+    public List<Festival> popularFestivals(){return festivalRepository.popularFestivals();}
 }
