@@ -12,4 +12,5 @@ public interface OrganizerRepository  extends JpaRepository<Organizer, String> {
 
     @Query("SELECT o FROM Organizer o WHERE o.festivals.size<1")
     public List<Organizer> organisersWithMultipleRuns();
+
 }
