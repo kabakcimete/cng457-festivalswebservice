@@ -27,12 +27,20 @@ public class ShowService {
         ArrayList<Shows> results = new ArrayList<>();
         List<Shows> showss = showRepository.findAll();
         for(Shows  availableshow: showss){
-           int performerNo =availableshow.getPerformers().size();
-            if(maximumPerformers <= performerNo){
+            int performerNo =availableshow.getPerformers().size();
+            if(maximumPerformers < performerNo){
                 maximumPerformers = performerNo;
+                if(!results.isEmpty()) {
+                    results.clear();
+                }
                 results.add(availableshow);
             }
+            if(maximumPerformers == performerNo){
+                results.add(availableshow);
+            }
+
         }
+
 
         return results;
     }
