@@ -5,6 +5,9 @@ import com.example.festivalswebservice.repository.ShowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class ShowService {
     @Autowired
@@ -18,4 +21,20 @@ public class ShowService {
     public Shows saveShow(Shows s){
         return showRepository.save(s);
     }
+
+    public List<Shows> maxPerformers(){
+        int maximumPerformers = -1;
+        ArrayList<Shows> results = new ArrayList<>();
+        List<Shows> showss = showRepository.findAll();
+        for(Shows  availableshow: showss){
+           int performerNo =availableshow.getPerformers().size();
+            if(maximumPerformers <= performerNo){
+                maximumPerformers = performerNo;
+                results.add(availableshow);
+            }
+        }
+
+        return results;
+    }
+
 }
