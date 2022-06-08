@@ -5,7 +5,9 @@ import com.example.festivalswebservice.repository.ShowRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import java.util.ArrayList;
+
 import java.util.List;
 
 @Service
@@ -21,6 +23,7 @@ public class ShowService {
     public Shows saveShow(Shows s){
         return showRepository.save(s);
     }
+
 
     public List<Shows> maxPerformers(){
         int maximumPerformers = -1;
@@ -43,6 +46,11 @@ public class ShowService {
 
 
         return results;
+    }
+
+
+    public List<Shows> findByDurationIsBetween(int lower, int upper){
+        return showRepository.findByDurationIsBetween(lower, upper);
     }
 
 }

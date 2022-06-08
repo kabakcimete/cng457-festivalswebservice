@@ -3,10 +3,14 @@ package com.example.festivalswebservice.controller;
 import com.example.festivalswebservice.model.Shows;
 import com.example.festivalswebservice.service.ShowService;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+
 
 import java.util.List;
 
@@ -25,8 +29,15 @@ public class ShowController {
         return showService.saveShow(s);
     }
 
+
     @GetMapping("/crowdedshows")
     public List<Shows> maxPerformers(){
         return showService.maxPerformers();
     }
+
+    @GetMapping("/showsbyduration/{lower}/{upper}")
+    public List<Shows> getCourses(@PathVariable int lower, @PathVariable int upper) {
+        return showService.findByDurationIsBetween(lower, upper);
+    }
+
 }
