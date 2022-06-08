@@ -8,4 +8,5 @@ import java.util.List;
 public interface ShowRepository  extends JpaRepository<Shows, Integer> {
 
     public List<Shows> findByDurationIsBetween(int lower, int upper);
+
 }
