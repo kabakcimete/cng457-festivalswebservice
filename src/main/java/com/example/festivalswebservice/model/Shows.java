@@ -7,7 +7,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
-import java.util.List;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 
 /**
@@ -19,5 +20,7 @@ import java.util.List;
 @Data
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "eventid")
 public class Shows extends Event{
-    private List<Performer> performers;
+
+    @OneToMany
+    private Set<Performer> performers;
 }
