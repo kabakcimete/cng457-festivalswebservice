@@ -2,6 +2,8 @@ package com.example.festivalswebservice.repository;
 
 import com.example.festivalswebservice.model.Festival;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -16,4 +18,10 @@ public interface FestivalRepository  extends JpaRepository<Festival, Integer> {
      * @return List of Festival with the given city name of variable s
      * */
     public List<Festival> findByCityContains(String s);
+
+    @Query("SELECT f FROM Festival f WHERE f.festivalname IN: name")
+    public List<Festival> getFestivalbyName(@Param("name") String name);
+
+    @Query("SELECT f FROM Festival f WHERE f.festivalruns.size = (SELECT max(festivalruns.size) FROM Festival )")
+    public List<Festival> popularFestivals();
 }

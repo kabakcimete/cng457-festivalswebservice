@@ -27,6 +27,7 @@ public  class Event {
 
     private int eventid;
     private String name;
+    private int duration;
     private String description;
     private Date date;
     @ManyToOne
