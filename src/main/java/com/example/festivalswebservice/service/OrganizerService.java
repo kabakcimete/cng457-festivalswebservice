@@ -23,7 +23,7 @@ public class OrganizerService {
     }
 
     public List<Organizer> organiserSearch(String d){
-        return organizerRepository.findByEmailContainsOrFnameContainsOrLnameContainsOrPhoneContains(d,d,d,d);
+        return organizerRepository.findByEmailStartingWithOrFnameContainsOrLnameContainsOrPhoneEquals(d,d,d,d);
     }
 
     public List<Organizer> organisersWithMultipleRuns(){
