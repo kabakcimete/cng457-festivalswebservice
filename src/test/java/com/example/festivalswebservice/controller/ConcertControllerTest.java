@@ -1,6 +1,7 @@
 package com.example.festivalswebservice.controller;
 
 import com.example.festivalswebservice.FestivalswebserviceApplication;
+import com.example.festivalswebservice.model.Concert;
 import com.example.festivalswebservice.model.Festival;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ class ConcertControllerTest {
     @Test
     void longestConcert() {
 
-        assertEquals(this.restTemplate.getForObject("http://localhost:" + port + "/longestconcerts", Festival[].class).length, 1);
+        assertEquals(this.restTemplate.getForObject("http://localhost:" + port + "/longestconcerts", Concert[].class).length, 2);
 
     }
 }
