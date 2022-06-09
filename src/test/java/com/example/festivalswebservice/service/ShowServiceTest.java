@@ -60,7 +60,7 @@ class ShowServiceTest extends Event {
 
         when(showRepository.findAll()).thenReturn(Showss);
         List<Shows> showList = showService.maxPerformers();
-        assertEquals(2, showList.size());
+        assertEquals(1, showList.size());
         assertEquals(3, showList.get(0).getPerformers().size());
 
     }

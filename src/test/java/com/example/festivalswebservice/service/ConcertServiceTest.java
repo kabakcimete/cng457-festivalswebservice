@@ -37,12 +37,18 @@ class ConcertServiceTest extends Event {
         concert1.setDescription("Acik Hava Consert");
 
         Concert concert2 = new Concert();
-        concert2.setName("Tarkan Concert");
+        concert2.setName("Ajdar Concert");
         concert2.setDuration(2);
         concert2.setDescription("Acik Hava Consert");
 
+        Concert concert3 = new Concert();
+        concert3.setName("Murat Boz Concert");
+        concert3.setDuration(3);
+        concert3.setDescription("Acik Hava Consert");
+
         concerts.add(concert1);
         concerts.add(concert2);
+        concerts.add(concert3);
 
         when(concertRepository.findAll()).thenReturn(concerts);
         List<Concert> concertsList = concertService.longestConcert();

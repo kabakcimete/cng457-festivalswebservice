@@ -23,7 +23,7 @@ public interface OrganizerRepository  extends JpaRepository<Organizer, String> {
      *
      * @return a list of organisers who have organised multiple festival runs
      */
-    @Query("SELECT o FROM Organizer o WHERE o.festivals.size<1")
+    @Query("SELECT o FROM Organizer o WHERE o.festivals.size>1")
     public List<Organizer> organisersWithMultipleRuns();
 
 }

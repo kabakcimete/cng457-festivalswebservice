@@ -49,6 +49,7 @@ public class ConcertService {
                     results.clear();
                 }
                 results.add(availableconcert);
+                continue;
             }
             if(longestConcerts == duration){
                 results.add(availableconcert);

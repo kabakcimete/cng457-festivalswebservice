@@ -41,6 +41,7 @@ public class ShowService {
                     results.clear();
                 }
                 results.add(availableshow);
+                continue;
             }
             if(maximumPerformers == performerNo){
                 results.add(availableshow);
