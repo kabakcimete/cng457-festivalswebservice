@@ -23,11 +23,20 @@ public class ConcertController {
         return concertService.saveConcert(c);
     }
 
+    /**
+     *
+     * @param key is the keyword to be searched
+     * @return a list of concert whose description contains the given keyword
+     */
     @GetMapping("/concertsbydescription")
     public List<Concert> findByDescriptionContains(@RequestParam(name="key", required = true) String key){
     return concertService.findByDescriptionContains(key);
     }
 
+    /**
+     *
+     * @return a list of concert with the longest duration
+     */
     @GetMapping("/longestconcerts")
     public List<Concert> longestConcert(){
         return concertService.longestConcert();

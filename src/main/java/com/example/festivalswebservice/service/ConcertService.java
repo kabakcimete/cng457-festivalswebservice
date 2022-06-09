@@ -23,9 +23,19 @@ public class ConcertService {
         return concertRepository.save(c);
     }
 
+    /**
+     * This method is for finding the list of concerts which have the given keyword in their description
+     * @param d the keyword to be searched
+     * @return a list of concerts with the given keyword in their descriptions
+     */
     public List<Concert> findByDescriptionContains(String d){
         return concertRepository.findByDescriptionContains(d);
     }
+
+    /**
+     * This method is for finding the concerts which have the highest durations
+     * @return a list of concerts with the longest duration
+     */
 
     public List<Concert> longestConcert(){
         int longestConcerts = -1;

@@ -61,7 +61,16 @@ public class FestivalService {
         return festivalRepository.findByCityContains(c);
     }
 
+    /**
+     *
+     * @param name is the keyword to be searched in the festivals name
+     * @return a list of festivals whose name includes the given keyword "name"
+     */
     public List<Festival> festivalsByName(String name){return festivalRepository.getFestivalbyName(name);}
 
+    /**
+     *
+     * @return a list of festivals with the highest number of runs
+     */
     public List<Festival> popularFestivals(){return festivalRepository.popularFestivals();}
 }
