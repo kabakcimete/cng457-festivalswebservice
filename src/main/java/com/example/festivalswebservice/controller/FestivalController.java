@@ -62,11 +62,20 @@ public class FestivalController {
         return festivalService.getFestivalsForACity(city);
     }
 
+    /**
+     * This method is for getting a list of festival which the name of them includes the given keyword.
+     * @param key is the keyword to be searched in the names fo festivals
+     * @return a list of festivals containing the keyword in their names
+     */
     @GetMapping("/festivalsbyname")
     public List<Festival> festivalsByName(@RequestParam(name="key", required = true) String key){
         return festivalService.festivalsByName(key);
     }
 
+    /**
+     * This method is for getting a list of festivals with the highest number of runs
+     * @return a list of festival with the highest number of runs
+     */
     @GetMapping("/popularfestivals")
     public List<Festival> popularFestivals() {
         return festivalService.popularFestivals();

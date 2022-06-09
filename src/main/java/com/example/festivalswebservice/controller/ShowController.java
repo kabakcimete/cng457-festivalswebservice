@@ -29,11 +29,21 @@ public class ShowController {
         return showService.saveShow(s);
     }
 
-
+    /**
+     *
+     * @return a list of show with the maximum number of performers
+     */
     @GetMapping("/crowdedshows")
     public List<Shows> maxPerformers(){
         return showService.maxPerformers();
     }
+
+    /**
+     *
+     * @param lower duration time
+     * @param upper duration time
+     * @return a list of shows which have a duration between the given durations.
+     */
 
     @GetMapping("/showsbyduration/{lower}/{upper}")
     public List<Shows> getCourses(@PathVariable int lower, @PathVariable int upper) {

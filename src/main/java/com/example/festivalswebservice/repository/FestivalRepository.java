@@ -19,8 +19,18 @@ public interface FestivalRepository  extends JpaRepository<Festival, Integer> {
      * */
     public List<Festival> findByCityContains(String s);
 
+    /**
+     *
+     * @param name is the keyword to be searched for the names of festival
+     * @return a list of festival whose name includes a given keyword
+     */
     @Query("SELECT f FROM Festival f WHERE f.festivalname IN: name")
     public List<Festival> getFestivalbyName(@Param("name") String name);
+
+    /**
+     *
+     * @return a list of festival with the highest number of runs
+     */
 
     @Query("SELECT f FROM Festival f WHERE f.festivalruns.size = (SELECT max(festivalruns.size) FROM Festival )")
     public List<Festival> popularFestivals();

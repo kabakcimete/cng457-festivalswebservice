@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+/**
+ * Class of Performer, have a ManyToOne relationship to Shows
+ */
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
