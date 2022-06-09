@@ -7,6 +7,10 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface OrganizerRepository  extends JpaRepository<Organizer, String> {
+
+
+    public List<Organizer> findByEmailStartingWithOrFnameContainsOrLnameContainsOrPhoneEquals(String key1,String key2,String key3,String key4);
+
     /**
      *
      * @param key1 the email keyword to be search from the srart
@@ -16,6 +20,7 @@ public interface OrganizerRepository  extends JpaRepository<Organizer, String> {
      * @return a list of organiser with the given input variables
      */
     public List<Organizer> findByEmailContainsOrFnameContainsOrLnameContainsOrPhoneContains(String key1,String key2,String key3,String key4);
+
 
     /**
      *
