@@ -22,11 +22,21 @@ public class OrganizerController {
         return organizerService.saveOrganizer(o);
     }
 
+
+    /**
+     *
+     * @param key is the keyword or a phone nummber to be searched
+     * @return a list of organisers with names containing the given keyword or the phone number or the email which begins with the given keyword
+     */
     @GetMapping("/organisersearch")
     public List<Organizer> organizerSearch(@RequestParam(name="key", required = true) String key){
         return organizerService.organiserSearch(key);
     }
 
+    /**
+     *
+     * @return a list of organisers who habe organised multiple festival runs
+     */
     @GetMapping("/organiserswithmultipleruns")
     public List<Organizer> organisersWithMultipleRuns(){
         return organizerService.organisersWithMultipleRuns();

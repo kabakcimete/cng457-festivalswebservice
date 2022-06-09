@@ -24,6 +24,10 @@ public class ShowService {
         return showRepository.save(s);
     }
 
+    /**
+     * This method is for geting the list of shows with the maximumum number of performers
+     * @return a list of shows with the maximum number of performers
+     */
 
     public List<Shows> maxPerformers(){
         int maximumPerformers = -1;
@@ -48,7 +52,12 @@ public class ShowService {
         return results;
     }
 
-
+    /**
+     * This method is for finding the shows which have a duration time between the given interval
+     * @param lower duration time
+     * @param upper duration time
+     * @return a list of shows which have a duration between the given lower and upper times
+     */
     public List<Shows> findByDurationIsBetween(int lower, int upper){
         return showRepository.findByDurationIsBetween(lower, upper);
     }
